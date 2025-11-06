@@ -1,10 +1,10 @@
 {
     "files.associations": {
-        "matrizes.h": "c",
-        "bibliomath.h": "c"
+      "matrizes.h": "c",
+      "bibliomath.h": "c"
     },
     "cSpell.words": [
-        "Bhaskara"
+      "Bhaskara"
     ],
     "java.configuration.updateBuildConfiguration": "automatic"
 }
