@@ -82,3 +82,10 @@
         gap: 5px;
     }
 }
+
+@media screen and (max-width: 872px) {
+    .quadros {
+        flex-direction: column;
+    }
+    
+}

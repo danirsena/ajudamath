@@ -57,7 +57,8 @@
     transition: all 0.3s ease;
 }
 
-.tab:hover, .tab.active {
+.tab:hover,
+.tab.active {
     border-color: var(--laranjaEscuro);
     color: #fff;
 }
@@ -93,16 +94,21 @@
     margin-bottom: 32px;
 }
 
-.contaCirculos {
-    display: none;
-}
-
-.contaCirculos span {
+.contaCirculos, .contaCirculos span {
     display: none;
 }
 
 .justificaTexto {
     text-align: justify;
+}
+
+.justificaTexto h1 {
+    font-size: 2rem;
+}
+
+.justificaTexto h2 {
+    font-size: 1.5rem;
+    margin-left: 32px;
 }
 
 input[type="button"] {
@@ -114,4 +120,40 @@ input[type="button"] {
     border-radius: 5px;
     font-size: 16px;
     transition: all 0.3s ease;
+}
+
+.quadros {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--azulClaro);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    text-align: justify;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.quadro:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition: all 0.3s ease;
+}
+
+.quadro h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
 }

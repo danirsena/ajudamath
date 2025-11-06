@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script> //Script para não dar flash na troca de tema
+        (function () {
+            const temaSalvo = localStorage.getItem('tema');
+            const temaEscuro = temaSalvo !== null
+                ? temaSalvo === 'dark'
+                : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', temaEscuro ? 'dark' : 'light');
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frações</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="arqs/style.css">
+    <script type="module" src="arqs/programacao.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="arqs/imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+
+        <header></header>
+
+        <div class="conteudo justificaTexto">
+
+            <div class="justificaTexto" id="fim"></div>
+
+            <h1>Frações</h1> <br><br>
+
+            <h2>Antes de tudo, o que é uma fração?</h2> <br>
+            Uma fração é uma representação de uma parte de um todo. Ela é composta por um numerador (a parte de cima) e
+            um denominador (a parte de baixo). A fração é lida como "numerador sobre denominador". Sua fórmula básica é:
+            <br><br>
+
+            <div class="centralizaBloco"> <strong>f</strong> &nbsp; = n / d</div> <br><br>
+
+            Onde <br><br>
+
+            <strong>n</strong> = numerador <br>
+            <strong>d</strong> = denominador <br>
+            <br><br>
+
+            <h2>Exemplos de frações</h2> <br>
+
+            <div class="quadros">
+
+                <!-- Quadro 1 -->
+                <div class="quadro">
+
+                    <h3>Fração própria</h3>
+
+                    <div class="flex justify-center p-6">
+                        <math class="text-3xl">
+                            <mfrac>
+                                <mn>3</mn>
+                                <mn>4</mn>
+                            </mfrac>
+                        </math>
+                    </div>
+
+                    Numerador (3) é menor que o denominador (4).
+                </div>
+
+                <!-- Quadro 2 -->
+                <div class="quadro">
+
+                    <h3>Fração imprópria</h3>
+
+                    <div class="flex justify-center p-6">
+                        <math class="text-3xl font-bold h-fit-content">
+                            <mfrac>
+                                <mn>5</mn>
+                                <mn>3</mn>
+                            </mfrac>
+                        </math>
+                    </div>
+
+                    Numerador (5) é maior que o denominador (3).
+                </div>
+
+                <!-- Quadro 3 -->
+                <class class="quadro">
+
+                    <h3>Fração mista</h3>
+
+                    <div class="flex justify-center p-6">
+                        <math class="text-3xl font-bold">
+                            <mfrac>
+                                <mn>1</mn>
+                                <mn>2</mn>
+                            </mfrac>
+                        </math>
+                    </div>
+
+                    Combina um escalar (número inteiro 1) com uma fração.
+                </class>
+
+            </div>
+
+            <h2>Operações com frações</h2> <br><br>
+
+            <h3>Exemplo 1: Soma e Subtração</h3> <br><br>
+
+            <p>Para somar ou subtrair frações, é necessário que elas tenham o mesmo denominador. Caso contrário, deve-se
+                encontrar um denominador comum. Vejamos um exemplo:</p> <br><br>
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>3</mn>
+                    <mn>4</mn>
+                </mfrac>
+            </math>
+
+            +
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>5</mn>
+                    <mn>6</mn>
+                </mfrac>
+            </math><br><br>
+
+            Os denominadores são diferentes (4 e 6), então, precisamos igualar esses valores. A forma mais fácil de
+            fazer isso é encontrar o <abbr title="Mínimo Múltiplo Comum">MMC</abbr> entre os dois números. O MMC de 4 e
+            6 é 12, pois é o menor número que ambos os números podem dividir sem deixar resto. <br><br>
+
+            Agora que sabemos o valor base(12), precisamos adaptar as frações. Para isso, precisamos dividir o 12
+            pelos denominadores das frações e multiplicar o resultado pelo numerador.<br><br>
+
+            Na primeira fração, 12 ÷ 4 = 3, então multiplicamos o <abbr title="número de cima">numerador</abbr> por 3. 3
+            x 3 = 9.
+            <br><br>
+
+            Na segunda fração, 12 ÷ 6 = 2, então multiplicamos o <abbr title="número de cima">numerador</abbr> por 2. 5
+            x 2 = 10.
+            <br><br>
+
+            Assim, a nova forma das frações é: <br><br>
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>9</mn>
+                    <mn>12</mn>
+                </mfrac>
+            </math>
+
+            +
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>10</mn>
+                    <mn>12</mn>
+                </mfrac>
+            </math> <br><br>
+
+            Agora que as frações possuem o mesmo denominador, podemos somá-las. (lembrando que o valor do
+            denominador não muda)<br><br>
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>9</mn>
+                    <mn>12</mn>
+                </mfrac>
+            </math>
+
+            +
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>10</mn>
+                    <mn>12</mn>
+                </mfrac>
+            </math>
+
+            =
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>19</mn>
+                    <mn>12</mn>
+                </mfrac>
+            </math><br><br>
+
+            <h3>Exemplo 2: Multiplicação</h3>
+
+            Para se multiplicar frações, basta multiplicar o numerador da primeira fração pelo numerador da segunda
+            fração, e o denominador da primeira fração pelo denominador da segunda fração. Vejamos um exemplo: <br><br>
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>2</mn>
+                    <mn>23</mn>
+                </mfrac>
+            </math>
+
+            +
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>4</mn>
+                    <mn>2</mn>
+                </mfrac>
+            </math>
+
+            =
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>8</mn>
+                    <mn>46</mn>
+                </mfrac>
+            </math><br><br>
+
+            <h3>Exemplo 3: Divisão</h3>
+            Para se dividir frações, basta multiplicar a primeira fração pelo inverso da segunda fração. Vejamos um
+            exemplo: <br><br>
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>4</mn>
+                    <mn>3</mn>
+                </mfrac>
+            </math>
+
+            ÷
+
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>6</mn>
+                    <mn>5</mn>
+                </mfrac>
+            </math>
+
+            =
+            <math>
+                <mfrac class="text-3xl font-bold">
+                    <mn>20</mn>
+                    <mn>18</mn>
+                </mfrac>
+            </math><br><br>
+
+
+        </div>
+        <br><br>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
